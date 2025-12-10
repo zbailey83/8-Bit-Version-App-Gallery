@@ -1,5 +1,6 @@
 import React from 'react';
 import { Gamepad2, Power } from 'lucide-react';
+import { PROJECTS } from '../constants';
 
 export const Header: React.FC = () => {
   return (
@@ -33,7 +34,7 @@ export const Header: React.FC = () => {
                 </div>
                 <div className="flex justify-between w-full font-mono text-retro-light text-sm mb-1">
                     <span>APPS</span>
-                    <span className="text-retro-red">11</span>
+                    <span className="text-retro-red">{PROJECTS.length}</span>
                 </div>
                  <div className="flex justify-between w-full font-mono text-retro-light text-sm">
                     <span>TIME</span>

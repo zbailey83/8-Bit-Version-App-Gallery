@@ -9,7 +9,8 @@ import {
   Users,
   Target,
   Palette,
-  Leaf
+  Leaf,
+  Gamepad2
 } from 'lucide-react';
 import { Project } from './types';
 
@@ -111,6 +112,15 @@ export const PROJECTS: Project[] = [
     url: 'https://predacted.netlify.app', 
     icon: Users,
     category: 'Web3',
+    color: ''
+  },
+  {
+    id: 'appgallery',
+    title: 'App Gallery v0.5',
+    description: 'Meta showcase of this 8-bit AI application gallery',
+    url: 'https://ai-app-showcase-875855106263.us-west1.run.app/',
+    icon: Gamepad2,
+    category: 'Showcase',
     color: ''
   },
 ];
