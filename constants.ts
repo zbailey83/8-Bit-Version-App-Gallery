@@ -21,7 +21,7 @@ export const PROJECTS: Project[] = [
     url: 'https://beatslicer-ai-875855106263.us-west1.run.app/',
     icon: Music,
     category: 'Audio',
-    color: '' // Handled by component based on category
+    color: '' 
   },
   {
     id: 'lumina',
@@ -97,9 +97,9 @@ export const PROJECTS: Project[] = [
   },
   {
     id: 'plantdoc',
-    title: 'PlantDoc',
+    title: 'Verdant Garden',
     description: 'Mobile App for Plant Health',
-    url: 'https://plantdoc-875855106263.us-west1.run.app/',
+    url: 'https://verdan-875855106263.us-west1.run.app/',
     icon: Leaf,
     category: 'Lifestyle',
     color: ''
@@ -108,7 +108,7 @@ export const PROJECTS: Project[] = [
     id: 'predacted',
     title: 'Predacted',
     description: 'Prediction Market Research/Consensus Agent Swarm',
-    url: 'https://service-4castr-875855106263.us-west1.run.app', 
+    url: 'https://predacted.netlify.app', 
     icon: Users,
     category: 'Web3',
     color: ''

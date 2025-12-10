@@ -3,41 +3,38 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Maximalist Design Showcase</title>
+    <title>8-Bit AI Showcase</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=DM+Sans:wght@400;500;700&family=Permanent+Marker&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=VT323&display=swap" rel="stylesheet">
     <script>
       tailwind.config = {
         theme: {
           extend: {
             fontFamily: {
-              sans: ['DM Sans', 'sans-serif'],
-              display: ['Archivo Black', 'sans-serif'],
-              hand: ['Permanent Marker', 'cursive'],
+              pixel: ['"Press Start 2P"', 'cursive'],
+              mono: ['"VT323"', 'monospace'],
             },
             colors: {
-              max: {
-                pink: "#ff6b9d",
-                orange: "#ffa94d",
-                blue: "#00d4ff",
-                purple: "#c471ed",
-                green: "#43e97b",
-                yellow: "#ffeb3b",
-                red: "#ff5722",
-                dark: "#1a1a1a",
-                cream: "#fffef5",
+              retro: {
+                dark: "#212529",
+                light: "#f8f9fa",
+                grey: "#e6e6e6",
+                green: "#4cb050",
+                red: "#e7040f",
+                blue: "#0052cc",
+                yellow: "#ffcc00",
+                darkgreen: "#0f380f", // Gameboy dark
               }
             },
             boxShadow: {
-              'hard': '8px 8px 0px 0px rgba(0,0,0,1)',
-              'hard-sm': '4px 4px 0px 0px rgba(0,0,0,1)',
-              'hard-lg': '12px 12px 0px 0px rgba(0,0,0,0.2)',
-              'sticker': '4px 4px 0px 0px rgba(0,0,0,0.15)',
+              'block': '4px 4px 0px 0px #000000',
+              'block-lg': '8px 8px 0px 0px #000000',
+              'block-sm': '2px 2px 0px 0px #000000',
             },
             backgroundImage: {
-              'memphis-pattern': "radial-gradient(#1a1a1a 1px, transparent 1px)",
+              'pixel-pattern': "url(\"data:image/svg+xml,%3Csvg width='4' height='4' viewBox='0 0 4 4' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M0 0h1v1H0zm2 2h1v1H2z' fill='%23000000' fill-opacity='0.1'/%3E%3C/svg%3E\")",
             }
           }
         }
@@ -45,42 +42,67 @@
     </script>
     <style>
       body {
-        background: linear-gradient(135deg, #ff6b9d 0%, #ffa94d 50%, #00d4ff 100%);
-        color: #1a1a1a;
-        min-height: 100vh;
+        background-color: #212529;
+        color: #f8f9fa;
+        font-family: 'VT323', monospace;
         overflow-x: hidden;
       }
       
-      .bg-dots {
-        background-image: radial-gradient(#000000 1.5px, transparent 1.5px);
-        background-size: 24px 24px;
-        opacity: 0.1;
+      /* CRT Scanline Effect */
+      .scanlines {
+        background: linear-gradient(
+          to bottom,
+          rgba(255, 255, 255, 0),
+          rgba(255, 255, 255, 0) 50%,
+          rgba(0, 0, 0, 0.2) 50%,
+          rgba(0, 0, 0, 0.2)
+        );
+        background-size: 100% 4px;
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        pointer-events: none;
+        z-index: 50;
       }
 
-      /* Custom Scrollbar */
+      /* CRT Vignette */
+      .vignette {
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: radial-gradient(circle, rgba(0,0,0,0) 60%, rgba(0,0,0,0.6) 100%);
+        pointer-events: none;
+        z-index: 49;
+      }
+
+      /* Retro Scrollbar */
       ::-webkit-scrollbar {
-        width: 12px;
+        width: 16px;
       }
       ::-webkit-scrollbar-track {
-        background: #fffef5;
+        background: #212529;
+        border-left: 2px solid #000;
       }
       ::-webkit-scrollbar-thumb {
-        background: #1a1a1a;
-        border: 2px solid #fffef5;
-        border-radius: 6px;
+        background: #e6e6e6;
+        border: 2px solid #000;
+        box-shadow: inset -2px -2px 0px #888, inset 2px 2px 0px #fff;
       }
       ::-webkit-scrollbar-thumb:hover {
-        background: #ff6b9d;
+        background: #4cb050;
       }
 
-      /* Text Outline Utility */
-      .text-stroke {
-        -webkit-text-stroke: 2px black;
-        color: transparent;
+      /* Blink Animation */
+      @keyframes blink {
+        0%, 100% { opacity: 1; }
+        50% { opacity: 0; }
       }
-      .text-stroke-white {
-        -webkit-text-stroke: 2px white;
-        color: transparent;
+      .animate-blink {
+        animation: blink 1s step-end infinite;
       }
     </style>
   <script type="importmap">

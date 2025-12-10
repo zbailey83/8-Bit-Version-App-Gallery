@@ -1,42 +1,46 @@
 import React from 'react';
-import { Sparkles, Star } from 'lucide-react';
+import { Gamepad2, Power } from 'lucide-react';
 
 export const Header: React.FC = () => {
   return (
-    <header className="relative py-12 mb-8 flex flex-col md:flex-row items-center justify-between gap-8">
-      
-      {/* Title Section */}
-      <div className="relative transform -rotate-2 hover:rotate-0 transition-transform duration-300">
-        {/* Decorative background blob */}
-        <div className="absolute -inset-4 bg-max-yellow skew-x-[-10deg] border-4 border-black shadow-hard rounded-sm -z-10" />
+    <header className="relative py-8 mb-8 border-b-4 border-white border-double bg-retro-dark">
+      <div className="flex flex-col md:flex-row items-center justify-between gap-6 px-4">
         
-        <h1 className="text-6xl md:text-8xl font-display font-black text-black uppercase tracking-tighter leading-[0.85] drop-shadow-sm">
-          Zach<span className="text-white text-stroke">.Stack</span>
-        </h1>
-        
-        <div className="absolute -top-6 -right-8 animate-bounce">
-            <div className="bg-max-green text-black border-2 border-black px-3 py-1 rounded-full font-hand text-sm transform rotate-12 shadow-sticker">
-                V.2.0 NEW!
+        {/* Title Block */}
+        <div className="flex items-center gap-4">
+            <div className="bg-retro-red p-2 border-2 border-white shadow-block-sm">
+                <Gamepad2 size={40} className="text-white" />
+            </div>
+            <div>
+                <h1 className="text-3xl md:text-5xl font-pixel text-retro-yellow leading-tight drop-shadow-[4px_4px_0_rgba(0,0,0,1)] uppercase">
+                    WhatDot<span className="text-white">.Fun</span>
+                </h1>
+                <div className="flex items-center gap-2 mt-2">
+                    <span className="w-3 h-3 bg-retro-green animate-blink"></span>
+                    <p className="font-mono text-lg text-retro-green uppercase tracking-widest">
+                        App Gallery by: Zach Bailey
+                    </p>
+                </div>
             </div>
         </div>
-      </div>
-      
-      {/* Description Section */}
-      <div className="relative max-w-lg">
-        <div className="bg-white border-4 border-black p-6 shadow-hard rotate-1">
-            <div className="absolute -top-3 left-1/2 -translate-x-1/2 bg-max-red text-white px-4 py-1 font-display uppercase text-xs tracking-widest border-2 border-black -rotate-2">
-                Manifesto
+
+        {/* Stats / Info Block */}
+        <div className="bg-retro-grey border-2 border-black p-1 shadow-block">
+            <div className="bg-retro-dark border-2 border-black p-3 flex flex-col items-start min-w-[200px]">
+                <div className="flex justify-between w-full font-mono text-retro-light text-sm mb-1">
+                    <span>WORLD</span>
+                    <span className="text-retro-yellow">1-1</span>
+                </div>
+                <div className="flex justify-between w-full font-mono text-retro-light text-sm mb-1">
+                    <span>APPS</span>
+                    <span className="text-retro-red">11</span>
+                </div>
+                 <div className="flex justify-between w-full font-mono text-retro-light text-sm">
+                    <span>TIME</span>
+                    <span className="text-retro-blue">{new Date().getFullYear()}</span>
+                </div>
             </div>
-            <p className="font-sans font-bold text-lg leading-tight text-max-dark">
-                A <span className="bg-max-blue px-1">curated chaos</span> of AI-powered applications. 
-                Designed for the <span className="font-hand text-xl text-max-purple">future</span>, 
-                built for the <span className="italic underline decoration-4 decoration-max-pink">now</span>.
-            </p>
         </div>
-        
-        {/* Floating Icons */}
-        <Star className="absolute -bottom-6 -left-6 text-max-yellow w-12 h-12 fill-current stroke-black stroke-2 animate-spin-slow" />
-        <Sparkles className="absolute -top-8 -right-4 text-max-pink w-8 h-8 fill-current stroke-black stroke-2" />
       </div>
     </header>
   );
