@@ -18,7 +18,7 @@ export const Header: React.FC = () => {
                 <div className="flex items-center gap-2 mt-2">
                     <span className="w-3 h-3 bg-retro-green animate-blink"></span>
                     <p className="font-mono text-lg text-retro-green uppercase tracking-widest">
-                        App Gallery by: Zach Bailey
+                        App Gallery by: Zach Bailey | <a href="https://www.linkedin.com/in/zbailey83">LinkedIn</a>
                     </p>
                 </div>
             </div>
