@@ -1,3 +1,4 @@
+
 import { 
   Music, 
   Heart, 
@@ -38,7 +39,7 @@ export const PROJECTS: Project[] = [
     title: 'vibeUI',
     description: 'UI/UX Designs With JSON Objects for use with Vibe Code IDEs',
     url: 'https://vibe-ux.netlify.app/',
-    icon: Rocket,
+    icon: Bot,
     category: 'Design',
     color: ''
   },
@@ -47,7 +48,7 @@ export const PROJECTS: Project[] = [
     title: 'Rocket Responder',
     description: 'AI Voice Agent Demo App',
     url: 'https://rocket-responder-875855106263.us-west1.run.app/',
-    icon: Bot,
+    icon: Rocket,
     category: 'Agents',
     color: ''
   },
@@ -88,10 +89,10 @@ export const PROJECTS: Project[] = [
     color: ''
   },
   {
-    id: 'instaui',
-    title: 'InstaUI',
-    description: 'DesignStyleRef JSON Gallery',
-    url: 'https://design-styles-gallery-875855106263.us-west1.run.app/',
+    id: 'vibeux',
+    title: 'vibeUX',
+    description: 'UI/UX Design JSON Object Marketplace',
+    url: 'https://vibe-ux.netlify.app',
     icon: Palette,
     category: 'Design',
     color: ''
@@ -119,8 +120,17 @@ export const PROJECTS: Project[] = [
     title: 'App Gallery v0.5',
     description: 'Meta showcase of this 8-bit AI application gallery',
     url: 'https://ai-app-showcase-875855106263.us-west1.run.app/',
-    icon: Gamepad2,
+    icon: Palette,
     category: 'Showcase',
     color: ''
   },
+];
+
+export const LATEST_PROJECTS: Project[] = [
+  PROJECTS.find(p => p.id === 'predacted')!,
+  PROJECTS.find(p => p.id === 'vibeux')!,
+  PROJECTS.find(p => p.id === 'plantdoc')!,
+  PROJECTS.find(p => p.id === 'rocket-responder')!,
+  PROJECTS.find(p => p.id === 'redactslice')!,
+  PROJECTS.find(p => p.id === 'vidseo')!,
 ];
