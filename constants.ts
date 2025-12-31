@@ -34,12 +34,12 @@ export const PROJECTS: Project[] = [
     color: ''
   },
   {
-    id: 'content-rocket',
-    title: 'Content Rocket',
-    description: '3-Day AI-Powered Digital Marketing Content & Automation Crash Course',
-    url: 'https://content-rocket-875855106263.us-west1.run.app',
+    id: 'vibe-ui',
+    title: 'vibeUI',
+    description: 'UI/UX Designs With JSON Objects for use with Vibe Code IDEs',
+    url: 'https://vibe-ux.netlify.app/',
     icon: Rocket,
-    category: 'Education',
+    category: 'Design',
     color: ''
   },
   {
@@ -100,7 +100,7 @@ export const PROJECTS: Project[] = [
     id: 'plantdoc',
     title: 'Verdant Garden',
     description: 'Mobile App for Plant Health',
-    url: 'https://verdan-875855106263.us-west1.run.app/',
+    url: 'https://verdan-plant.netlify.app/',
     icon: Leaf,
     category: 'Lifestyle',
     color: ''
